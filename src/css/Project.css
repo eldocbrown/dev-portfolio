@@ -1,0 +1,116 @@
+.project-intro {
+    position: relative;
+}
+
+.project-intro__title {
+    display: block;
+    margin-top: .25em;
+    margin-bottom: .25em;
+    font-weight: var(--fw-reg);
+    text-align: center;
+}
+
+.project-intro__subtitle {
+    display: inline-block;
+    margin: 0;
+    font-size: var(--fs-h3);
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+.project-intro__subtitle--overflow {
+    display: inline-block;
+    margin: 0;
+    font-size: var(--fs-h3);
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+    visibility: hidden;
+}
+
+.project-intro__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .project-intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .project-intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .project-intro__title {
+        text-align: center;
+    }
+
+    .project-intro__subtitle {
+        align-self: start;
+        grid-column-start: -1;
+        grid-column-end: -2;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        right: 0;
+        width: calc(100%);
+        margin-bottom: 0;
+    }
+
+    .project-intro__subtitle--overflow {
+        align-self: start;
+        grid-column-start: -1;
+        grid-column-end: -3 ;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+        visibility: visible;
+    }
+}
+
+.project-social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    color: var(--clr-accent);
+    text-align: center;
+    font-size: var(--fs-h3);
+}
+
+.project-social-list__item {
+    margin: 0 .5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-social-list__link {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.project-social-list__link:hover {
+    opacity: .7;
+}
+
+.project-social-list__linkText {
+  color: var(--clr-light);
+  font-size: var(--fs-body);
+}
+
+.project-social-list a {
+    color: inherit;
+    text-decoration: none;
+}

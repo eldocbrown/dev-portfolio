@@ -1,0 +1,43 @@
+.portfolio__item {
+  background: var(--clr-accent);
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio__img {
+  transition:
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+  z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+  transform: scale(1.2);
+  opacity: .5;
+}
+
+.portfolio__keyword {
+  position: absolute;
+  bottom: 2em;
+  right: -5em;
+  opacity: 0;
+  color: var(--clr-light);
+  font-family: var(--ff-code);
+  transition:
+    right 150ms linear,
+    opacity 500ms linear;
+}
+
+.portfolio__item:hover .portfolio__keyword {
+  opacity: 1;
+  right: 2em;
+}
+
+.portfolio__item:focus .portfolio__keyword {
+  opacity: 1;
+  right: 2em;
+}
