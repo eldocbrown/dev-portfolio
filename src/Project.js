@@ -62,15 +62,15 @@ function Project(props) {
       </li>
     ) : null
 
-    const jsxLiveLink = liveLink ?
-      (
-        <li className="project-social-list__item">
-          <a className="project-social-list__link" href={liveLink} target="_blank">
-            <FontAwesomeIcon icon={faHeartbeat} />
-          </a>
-          <span className="project-social-list__linkText">Live App</span>
-        </li>
-      ) : null
+  const jsxLiveLink = liveLink ?
+    (
+      <li className="project-social-list__item">
+        <a className="project-social-list__link" href={liveLink} target="_blank">
+          <FontAwesomeIcon icon={faHeartbeat} />
+        </a>
+        <span className="project-social-list__linkText">Live App</span>
+      </li>
+    ) : null
 
   return (
     <>
@@ -80,7 +80,7 @@ function Project(props) {
         </h1>
         <p className="project-intro__subtitle--overflow">&nbsp;</p>
         <p className="project-intro__subtitle">{subtitle}</p>
-        <img src={req(`./portfolio-01.jpg`).default} alt="project cover image" className="project-intro__img"></img>
+        <img src={req(`./${imgTitleFilename}`).default} alt="project cover image" className="project-intro__img"></img>
       </div>
 
       <div className="portfolio-item-individual">

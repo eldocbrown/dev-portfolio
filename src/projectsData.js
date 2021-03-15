@@ -2,7 +2,7 @@ export default [
   {
     id: "poli",
     keywords: [
-      "django", "javascript", "css"
+      "django", "js", "css"
     ],
     title: "Poli",
     subtitle: "an appointment manager app",
@@ -25,14 +25,15 @@ export default [
     ],
     title: "Portfolio",
     subtitle: "data about myself and my work",
-    imgTitleFilename: "portfolio-01.jpg",
+    imgTitleFilename: "devportfolio-01.jpg",
     descriptionParagraphs: [
-      "My work portfolio built as a single page application with React, making use of React Router Router and PropTypes libraries.",
-      "CSS Custom Properties and Variables are used to maintain style consistency easily over different components. Navigation menu sliding and hamburger transformmation behaviour is built with CSS Transitions. Image overlap on headers is implemented with CSS Grids.",
+      "My work portfolio built with React,as a single page application, making use of React Router Router and PropTypes libraries.",
+      "Responsive design is accomplished by CSS Media Queries. CSS Custom Properties and Variables are used to maintain style consistency easily over different components. Navigation menu sliding and hamburger transformmation behaviour is built with CSS Transitions. Image overlap on headers is implemented with CSS Grids.",
       "This application is deployed automatically with GitHub Actions on GitHub Pages."
     ],
     imgDescriptionFileNames: [
-      "portfolio-details.jpg"
+      "devportfolio-02.png",
+      "devportfolio-03.png"
     ],
     github: "https://github.com/eldocbrown/portfolio-dev",
     liveLink: "http://poliapp.herokuapp.com"
