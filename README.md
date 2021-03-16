@@ -2,4 +2,4 @@
 
 React application with info about myself and my work.
 
-See it live on this [link](https://eldocbrown.github.io/portfolio)
+See it live on this [link](https://eldocbrown.github.io/dev-portfolio)
