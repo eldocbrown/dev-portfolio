@@ -10,7 +10,7 @@ function SectionHome(props) {
             Hi, I am <strong className="section__title__name">Juan Donato</strong>
         </h1>
         <p className="section__subtitle section__subtitle--intro">full-stack dev</p>
-        <img src={devjuan01} alt="a picture of Jane Smith smiling" className="intro__img"></img>
+        <img src={devjuan01} alt="a picture of Juan smiling" className="intro__img"></img>
     </section>
   )
 

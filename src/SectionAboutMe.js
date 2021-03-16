@@ -14,7 +14,7 @@ function SectionAboutMe(props) {
          <p>Agile software development practices that I promoted in the teams I led are present in my work, including test automation, a TDD aproach, and continuous integraton and deployment.</p>
       </div>
 
-      <img src={devjuan} alt="" className="about-me__img"></img>
+      <img src={devjuan} alt="Juan with glasses" className="about-me__img"></img>
     </section>
   )
 

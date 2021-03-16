@@ -14,7 +14,7 @@ function SectionMyServices(props) {
 
               <Service
                 title="Sustainable Web Development"
-                description="I build web applications from scratch to production, from data to UI, with Git version control and throwing in lots of tests, over a CI/CD pipeline."
+                description="I create web applications to solve valuable problems for our customers, building from scratch to production, from data to UI, with Git version control and throwing in lots of tests, over a CI/CD pipeline."
               />
 
               <Service

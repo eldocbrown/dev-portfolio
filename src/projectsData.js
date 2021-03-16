@@ -21,7 +21,7 @@ export default [
   {
     id: "portfolio",
     keywords: [
-      "react", "css"
+      "react", "css", "router"
     ],
     title: "Portfolio",
     subtitle: "data about myself and my work",

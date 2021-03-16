@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import {useLocation} from "react-router-dom"
+import requireContext from 'require-context.macro'
 
 import PortfolioItem from './PortfolioItem'
 import projectsData from "./projectsData"
@@ -15,7 +16,7 @@ function ProjectList(props) {
     }
   }, [])
 
-  const req = require.context('./img', true, /^\.\/.*$/)
+  const req = requireContext('./img', true, /^\.\/.*$/)
 
   const portfolioItems = projectsData.map( p => <PortfolioItem key={p.id} itemlink={p.id} imgsrc={req(`./${p.imgTitleFilename}`).default} keywords={p.keywords}/>)
 

@@ -3,6 +3,7 @@ import {Link, useParams} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons'
+import requireContext from 'require-context.macro'
 
 import projectsData from "./projectsData"
 import './css/Project.css'
@@ -28,7 +29,7 @@ function Project(props) {
           liveLink
         } = thisProject
 
-  const req = require.context('./img', true, /^\.\/.*$/) //   load images into context
+  const req = requireContext('./img', true, /^\.\/.*$/) //   load images into context
 
   const jsxDescParagraphs = descriptionParagraphs.map( (p, j) => <p key={j+1}>{p}</p> )
   const jsxDescImages = imgDescriptionFileNames.map( (i, j) => <img key={-j-1} src={req(`./${i}`).default} alt="project image"></img>)
