@@ -58,22 +58,22 @@ export default [
     liveLink: "https://eldocbrown.github.io/currency/"
   },
   {
-    id: "poli4",
+    id: "budget",
     keywords: [
-      "django", "javascript", "css"
+      "react", "hooks", "bootstrap"
     ],
-    title: "Poli",
-    subtitle: "an appointment manager app",
-    imgTitleFilename: "portfolio-01.jpg",
+    title: "Budget",
+    subtitle: "a budget assistant",
+    imgTitleFilename: "devbudget-cover.png",
     descriptionParagraphs: [
-      "Voluptatibus, soluta blanditiis! Incidunt ea unde itaque illo molestiae eligendi sint culpa nobis voluptas sapiente voluptate, magnam ipsum eius earum?",
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe et amet tenetur! Fugit sequi optio corrupti fugiat ducimus consequatur incidunt?",
-      "Voluptatibus, soluta blanditiis! Incidunt ea unde itaque illo molestiae eligendi sint culpa nobis voluptas sapiente voluptate, magnam ipsum eius earum?"
+      "This simple applications tells you if, with the money you have, you can buy a list of priced items or not. A budget assistant built with React, Hooks and tested with React Testing Library and Jest. The UI is built using Bootstrap library.",
+      "Tests are built with Jest and React Test Renderer, and pipeline is set to deploy the app on +90% code coverage only, and no tests failures.",
+      "Application is automatically built, tested and deployed with GitHub Actions and published at the project repository's GitHub Pages."
     ],
     imgDescriptionFileNames: [
-      "portfolio-details.jpg"
+      "devbudget-01.png"
     ],
-    github: "https://github.com/eldocbrown/poli",
-    liveLink: ""
+    github: "https://github.com/eldocbrown/budget-calculator",
+    liveLink: "https://eldocbrown.github.io/budget-calculator/"
   },
 ]
