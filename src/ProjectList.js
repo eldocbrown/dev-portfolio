@@ -3,7 +3,7 @@ import {useLocation} from "react-router-dom"
 import requireContext from 'require-context.macro'
 
 import PortfolioItem from './PortfolioItem'
-import projectsData from "./projectsData"
+import projectsData from './projectsData'
 import './css/ProjectList.css'
 
 function ProjectList(props) {

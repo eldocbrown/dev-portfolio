@@ -5,7 +5,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons'
 import requireContext from 'require-context.macro'
 
-import projectsData from "./projectsData"
+import projectsData from './projectsData.js'
 import './css/Project.css'
 
 
