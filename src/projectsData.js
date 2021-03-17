@@ -76,4 +76,23 @@ export default [
     github: "https://github.com/eldocbrown/budget-calculator",
     liveLink: "https://eldocbrown.github.io/budget-calculator/"
   },
+  {
+    id: "dogyears",
+    keywords: [
+      "js", "css", "jest"
+    ],
+    title: "Dog Years",
+    subtitle: "human to dog years converter",
+    imgTitleFilename: "devdogyears-cover.png",
+    descriptionParagraphs: [
+      "This simple vanilla Javascript application tells you how many dog years are you. CSS Transition is used to fade in and out the conversion result message.",
+      "Tests are built with Jest, and pipeline is set to deploy the app on no tests failures.",
+      "Application is automatically built, tested and deployed with GitHub Actions and published at the project repository's GitHub Pages."
+    ],
+    imgDescriptionFileNames: [
+      "devdogyears-01.png"
+    ],
+    github: "https://github.com/eldocbrown/dog-years-converter",
+    liveLink: "https://eldocbrown.github.io/dog-years-converter/"
+  },
 ]
