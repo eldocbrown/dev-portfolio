@@ -11,7 +11,7 @@ function SectionAboutMe(props) {
 
       <div className="about-me__body">
          <p>Since I started my carreer in software development, I was always motivated to build products that customers actually wanted to use because they solved real and valuable problems for them, and yet, they worked for our business.</p>
-         <p>Agile software development practices that I promoted in the teams I led are present in my work, including test automation, a TDD aproach, and continuous integraton and deployment.</p>
+         <p>Agile software development practices that I promoted in the teams I led are present in my work, including test automation, a TDD aproach, and continuous integration and deployment.</p>
       </div>
 
       <img src={devjuan} alt="Juan with glasses" className="about-me__img"></img>

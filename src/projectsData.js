@@ -48,7 +48,7 @@ export default [
     imgTitleFilename: "devcurrency-cover.png",
     descriptionParagraphs: [
       "Online currency converter React application, using rates pulled from Foreign exchange rates API (https://exchangeratesapi.io/). Initial exhange rates loading and change events are handled with React Hooks.",
-      "Tests are built with Jest and React Test Renderer, and pipeline is set to deploy the app on +90% code coverage only, and no tests failures.",
+      "Tests are built with Jest and React Test Renderer, and pipeline is set to deploy the app on +90% code coverage only, with no tests failures.",
       "Application is automatically built, tested and deployed with GitHub Actions and published at the project repository's GitHub Pages."
     ],
     imgDescriptionFileNames: [
@@ -67,7 +67,7 @@ export default [
     imgTitleFilename: "devbudget-cover.png",
     descriptionParagraphs: [
       "This simple applications tells you if, with the money you have, you can buy a list of priced items or not. A budget assistant built with React, Hooks and tested with React Testing Library and Jest. The UI is built using Bootstrap library.",
-      "Tests are built with Jest and React Test Renderer, and pipeline is set to deploy the app on +90% code coverage only, and no tests failures.",
+      "Tests are built with Jest and React Test Renderer, and pipeline is set to deploy the app on +90% code coverage only, with no tests failures.",
       "Application is automatically built, tested and deployed with GitHub Actions and published at the project repository's GitHub Pages."
     ],
     imgDescriptionFileNames: [
