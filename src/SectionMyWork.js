@@ -7,8 +7,6 @@ import './css/SectionMyWork.css'
 
 function SectionMyWork(props) {
 
-  console.log(process.env.PUBLIC_URL)
-
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <section className="my-work" id={props.id}>

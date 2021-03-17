@@ -8,7 +8,6 @@ import requireContext from 'require-context.macro'
 import projectsData from './projectsData.js'
 import './css/Project.css'
 
-
 function Project(props) {
 
   useEffect(() => {
