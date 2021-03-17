@@ -1,3 +1,4 @@
+/* For Phones and Tablets */
 .portfolio__item {
   background: var(--clr-accent);
   overflow: hidden;
@@ -13,7 +14,8 @@
   font-family: var(--ff-code);
 }
 
-@media (min-width: 600px) {
+/* For desktop */
+@media only screen and (min-width: 1024px) {
   .portfolio__img {
     transition:
       transform 750ms cubic-bezier(.5, 0, .5, 1),
