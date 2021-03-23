@@ -95,4 +95,25 @@ export default [
     github: "https://github.com/eldocbrown/dog-years-converter",
     liveLink: "https://eldocbrown.github.io/dog-years-converter/"
   },
+  {
+    id: "speedtyping",
+    keywords: [
+      "react", "hooks", "css"
+    ],
+    title: "Speed Typing",
+    subtitle: "retro styled speed typing game",
+    imgTitleFilename: "devspeedtyping-cover.png",
+    descriptionParagraphs: [
+      "A React speed typing game, that uses functional components and Hooks (useState, useEffect, useReducer, useRef)",
+      "The application is responsive via using standard CSS media queries and mobile first design.",
+      "Tests are built with Jest, and pipeline is set to deploy the app on no tests failures.",
+      "Application is automatically built, tested and deployed with GitHub Actions and published at the project repository's GitHub Pages."
+    ],
+    imgDescriptionFileNames: [
+      "devspeedtyping-01.png",
+      "devspeedtyping-02.png"
+    ],
+    github: "https://github.com/eldocbrown/speed-typing",
+    liveLink: "https://eldocbrown.github.io/speed-typing/"
+  },
 ]
