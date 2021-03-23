@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dev-portfolio/static/css/main.49b2123d.chunk.css",
-    "main.js": "/dev-portfolio/static/js/main.31833f7c.chunk.js",
-    "main.js.map": "/dev-portfolio/static/js/main.31833f7c.chunk.js.map",
+    "main.js": "/dev-portfolio/static/js/main.51ab71c3.chunk.js",
+    "main.js.map": "/dev-portfolio/static/js/main.51ab71c3.chunk.js.map",
     "runtime-main.js": "/dev-portfolio/static/js/runtime-main.1459b89f.js",
     "runtime-main.js.map": "/dev-portfolio/static/js/runtime-main.1459b89f.js.map",
     "static/js/2.f124c192.chunk.js": "/dev-portfolio/static/js/2.f124c192.chunk.js",
@@ -23,6 +23,9 @@
     "static/media/devportfolio-02.png": "/dev-portfolio/static/media/devportfolio-02.04600e03.png",
     "static/media/devportfolio-03.png": "/dev-portfolio/static/media/devportfolio-03.147d43de.png",
     "static/media/devportfolio-cover.jpg": "/dev-portfolio/static/media/devportfolio-cover.f92fe816.jpg",
+    "static/media/devspeedtyping-01.png": "/dev-portfolio/static/media/devspeedtyping-01.6efe6f1f.png",
+    "static/media/devspeedtyping-02.png": "/dev-portfolio/static/media/devspeedtyping-02.ebaeade1.png",
+    "static/media/devspeedtyping-cover.png": "/dev-portfolio/static/media/devspeedtyping-cover.772f448e.png",
     "static/media/portfolio-01.jpg": "/dev-portfolio/static/media/portfolio-01.56981cdf.jpg",
     "static/media/portfolio-details.jpg": "/dev-portfolio/static/media/portfolio-details.360c2ff7.jpg",
     "static/media/seal-csd.png": "/dev-portfolio/static/media/seal-csd.9b8fe3b9.png",
@@ -33,6 +36,6 @@
     "static/js/runtime-main.1459b89f.js",
     "static/js/2.f124c192.chunk.js",
     "static/css/main.49b2123d.chunk.css",
-    "static/js/main.31833f7c.chunk.js"
+    "static/js/main.51ab71c3.chunk.js"
   ]
 }
