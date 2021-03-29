@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom"
 import requireContext from 'require-context.macro'
 
 import PortfolioItem from './PortfolioItem'
-import projectsData from './projectsData'
 import './css/ProjectList.css'
 import { DataContext } from './dataContext'
 
@@ -21,7 +20,7 @@ function ProjectList(props) {
 
   const req = requireContext('./img', true, /^\.\/.*$/)
 
-  const portfolioItems = projectsData.map( p => <PortfolioItem key={p.id} itemlink={p.id} imgsrc={req(`./${p.imgTitleFilename}`).default} keywords={p.keywords}/>)
+  const portfolioItems = projects.map( p => <PortfolioItem key={p.id} itemlink={p.id} imgsrc={req(`./${p.imgTitleFilename}`).default} keywords={p.keywords}/>)
 
   return (
       <div className="portfolio">

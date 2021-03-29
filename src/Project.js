@@ -1,14 +1,16 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useContext} from 'react'
 import {Link, useParams} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons'
 import requireContext from 'require-context.macro'
 
-import projectsData from './projectsData.js'
+import { DataContext } from './dataContext'
 import './css/Project.css'
 
 function Project(props) {
+
+  const { projects } = useContext(DataContext)
 
   useEffect(() => {
     window.location.hash = `#${props.anchor}`
@@ -16,7 +18,7 @@ function Project(props) {
 
   const { projectId } = useParams()
 
-  const thisProject = projectsData.find(project => project.id === projectId)
+  const thisProject = projects.find(project => project.id === projectId)
 
   const {
           title,
