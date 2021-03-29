@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './css/index.css';
+import { DataContextProvider } from './dataContext'
 //import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DataContextProvider>
+      <App />
+    </DataContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
