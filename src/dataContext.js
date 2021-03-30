@@ -15,14 +15,15 @@ const firebaseConfig = {
 
 const DataContext = React.createContext()
 
-function DataContextProvider({children})  {
+function DataContextProvider({children, value})  {
 
   const [ projects, setProjects ] = useState([])
 
   useEffect(() => {
 
     firebase.initializeApp(firebaseConfig)
-    firebase.analytics()
+
+    firebase.analytics.isSupported().then((supported) => supported && firebase.analytics())
 
     const db = firebase.firestore()
 
