@@ -3,14 +3,29 @@ import firebase from 'firebase/app'
 import 'firebase/analytics'
 import 'firebase/firestore'
 
-const firebaseConfig = {
-    apiKey: "AIzaSyBhJZOq7RDFgM32PvZqhtsqvlZvxulz4PI",
-    authDomain: "dev-portfolio-89f56.firebaseapp.com",
-    projectId: "dev-portfolio-89f56",
-    storageBucket: "dev-portfolio-89f56.appspot.com",
-    messagingSenderId: "83518598822",
-    appId: "1:83518598822:web:77c73a2fbbbe1735d40e67",
-    measurementId: "G-GJT677YJHX"
+let firebaseConfig = null
+
+if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
+  firebaseConfig = {
+    apiKey: "AIzaSyBtTHstnva_yCTURxIb9bTlFaaxziCykhU",
+    authDomain: "dev-portfolio-dev.firebaseapp.com",
+    projectId: "dev-portfolio-dev",
+    storageBucket: "dev-portfolio-dev.appspot.com",
+    messagingSenderId: "1081547546374",
+    appId: "1:1081547546374:web:877c1ce4c9a64a023ac887",
+    measurementId: "G-N3KVSW0446"
+  }
+}
+else if (process.env.NODE_ENV === 'production') {
+  firebaseConfig = {
+     apiKey: "AIzaSyBhJZOq7RDFgM32PvZqhtsqvlZvxulz4PI",
+     authDomain: "dev-portfolio-89f56.firebaseapp.com",
+     projectId: "dev-portfolio-89f56",
+     storageBucket: "dev-portfolio-89f56.appspot.com",
+     messagingSenderId: "83518598822",
+     appId: "1:83518598822:web:77c73a2fbbbe1735d40e67",
+     measurementId: "G-GJT677YJHX"
+ }
 }
 
 const DataContext = React.createContext()
