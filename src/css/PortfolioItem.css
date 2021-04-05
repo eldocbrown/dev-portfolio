@@ -42,11 +42,11 @@
 
   .portfolio__item:hover .portfolio__keyword {
     opacity: 1;
-    right: 1em;
+    right: 0.5em;
   }
 
   .portfolio__item:focus .portfolio__keyword {
     opacity: 1;
-    right: 1em;
+    right: 0.5em;
   }
 }
