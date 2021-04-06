@@ -1,12 +1,13 @@
 import React, { useEffect, useContext } from 'react'
 import { useLocation } from "react-router-dom"
-import requireContext from 'require-context.macro'
 
 import PortfolioItem from './PortfolioItem'
 import './css/ProjectList.css'
 import { DataContext } from './dataContext'
 
 function ProjectList(props) {
+
+  const { projects } = useContext(DataContext)
 
   const location = useLocation()
 
@@ -16,11 +17,8 @@ function ProjectList(props) {
     }
   }, [])
 
-  const { projects } = useContext(DataContext)
-
-  const req = requireContext('./img', true, /^\.\/.*$/)
-
-  const portfolioItems = projects.map( p => <PortfolioItem key={p.id} itemlink={p.id} imgsrc={req(`./${p.imgTitleFilename}`).default} keywords={p.keywords}/>)
+  let portfolioItems
+  if (projects.length > 0) { portfolioItems = projects.map( p => <PortfolioItem key={p.id} itemlink={p.id} imgsrc={p.imgTitleURL} keywords={p.keywords} />) }
 
   return (
       <div className="portfolio">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/analytics'
 import 'firebase/firestore'
+import 'firebase/storage'
 
 let firebaseConfig = null
 
@@ -42,24 +43,39 @@ function DataContextProvider({children, value})  {
 
     const db = firebase.firestore()
 
-    db.collection("projects").get().then((querySnapshot) => {
-      let newState = []
-      querySnapshot.forEach((doc) => {
-          newState.push({
-            id: doc.id,
-            keywords: doc.data().keywords,
-            title: doc.data().title,
-            subtitle: doc.data().subtitle,
-            imgTitleFilename: doc.data().imgTitleFilename,
-            descriptionParagraphs: doc.data().descriptionParagraphs,
-            imgDescriptionFileNames: doc.data().imgDescriptionFileNames,
-            github: doc.data().github,
-            liveLink: doc.data().liveLink
-          })
-      })
-      setProjects(newState)
-    })
+    const storage = firebase.storage().ref()
 
+    db.collection("projects").get()
+      .then((querySnapshot) => {
+
+        const arrayOfPromises = querySnapshot.docs.map((doc) => {
+          return new Promise((resolve, reject) => {
+            resolve(
+              storage.child(`projects/${doc.id}/cover/${doc.data().imgTitleFilename}`).getDownloadURL()
+                .then((url) => {
+                  return {
+                        id: doc.id,
+                        keywords: doc.data().keywords,
+                        title: doc.data().title,
+                        subtitle: doc.data().subtitle,
+                        imgTitleURL: url,
+                        imgTitleFilename: doc.data().imgTitleFilename,
+                        descriptionParagraphs: doc.data().descriptionParagraphs,
+                        imgDescriptionFileNames: doc.data().imgDescriptionFileNames,
+                        github: doc.data().github,
+                        liveLink: doc.data().liveLink
+                  }
+                })
+            )
+          })
+        })
+
+        const resolvedPromises = Promise.all(arrayOfPromises)
+
+        return resolvedPromises
+
+      })
+      .then((state) => setProjects(state))
   }, [])
 
   return (
