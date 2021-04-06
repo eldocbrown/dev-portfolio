@@ -23,9 +23,9 @@ function Project(props) {
   const {
           title,
           subtitle,
-          imgTitleFilename,
+          imgTitleURL,
           descriptionParagraphs,
-          imgDescriptionFileNames,
+          imgDescriptionURLs,
           github,
           liveLink
         } = thisProject
@@ -33,7 +33,7 @@ function Project(props) {
   const req = requireContext('./img', true, /^\.\/.*$/) //   load images into context
 
   const jsxDescParagraphs = descriptionParagraphs.map( (p, j) => <p key={j+1}>{p}</p> )
-  const jsxDescImages = imgDescriptionFileNames.map( (i, j) => <img key={-j-1} src={req(`./${i}`).default} alt="project image"></img>)
+  const jsxDescImages = imgDescriptionURLs.map( (url, j) => <img key={-j-1} src={url} alt="project image"></img>)
 
   let jsxDesc = []
 
@@ -82,7 +82,7 @@ function Project(props) {
         </h1>
         <p className="project-intro__subtitle--overflow">&nbsp;</p>
         <p className="project-intro__subtitle">{subtitle}</p>
-        <img src={req(`./${imgTitleFilename}`).default} alt="project cover image" className="project-intro__img"></img>
+        <img src={imgTitleURL} alt="project cover image" className="project-intro__img"></img>
       </div>
 
       <div className="portfolio-item-individual">

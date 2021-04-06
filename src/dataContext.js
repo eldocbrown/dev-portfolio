@@ -48,11 +48,11 @@ function DataContextProvider({children, value})  {
     db.collection("projects").get()
       .then((querySnapshot) => {
 
-        const arrayOfPromises = querySnapshot.docs.map((doc) => {
+        const arrayOfPromises = querySnapshot.docs.map( doc => {
           return new Promise((resolve, reject) => {
             resolve(
               storage.child(`projects/${doc.id}/cover/${doc.data().imgTitleFilename}`).getDownloadURL()
-                .then((url) => {
+                .then( url => {
                   return {
                         id: doc.id,
                         keywords: doc.data().keywords,
@@ -65,6 +65,19 @@ function DataContextProvider({children, value})  {
                         github: doc.data().github,
                         liveLink: doc.data().liveLink
                   }
+                })
+                .then((obj) => {
+
+                  const arrayOfURLPromises = obj.imgDescriptionFileNames.map( fileName => {
+                    return new Promise((resolve, reject) => {
+                      resolve( storage.child(`projects/${doc.id}/detail/${fileName}`).getDownloadURL() )
+                    })
+                  })
+
+                  return Promise.all(arrayOfURLPromises)
+                    .then( urls => {
+                      return {...obj, imgDescriptionURLs: urls}
+                    })
                 })
             )
           })
