@@ -8,16 +8,10 @@ function Footer(props) {
 
   return (
     <footer className="footer">
-      <a href={`mailto:${props.email}`} className="footer__link">{props.email}</a>
       <ul className="social-list">
         <li className="social-list__item">
           <a className="social-list__link" href="https://dev.to/eldocbrown">
             <FontAwesomeIcon icon={faDev} />
-          </a>
-        </li>
-        <li className="social-list__item">
-          <a className="social-list__link" href="https://twitter.com/JuanCruzDonato1">
-            <FontAwesomeIcon icon={faTwitter} />
           </a>
         </li>
         <li className="social-list__item">
